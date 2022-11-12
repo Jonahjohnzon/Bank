@@ -2,7 +2,7 @@ import React from 'react'
 
 const Fifth = () => {
   return (
-    <div className='flex w-full justify-center text-lg my-10'>
+    <div className='flex w-full justify-center text-lg my-10 text-center laptop:text-left'>
     <div>
         <div className='mb-3'>Loan amounts range between $200 to $30,000 with repayment periods from 61 days to 18 months  (APRs from 5% to 10.15%)</div>
         <div className=' text-xl font-semibold mb-3'>An example of a Heritage loan</div>

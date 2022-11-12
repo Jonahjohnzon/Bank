@@ -16,10 +16,10 @@ const Fourth = () => {
         }
     }
   return (
-    <div className='flex justify-center mt-10 w-full h-56  items-center  '>
+    <div className='flex justify-center mt-5 mb-10 laptop:mb-0 laptop:mt-10 w-full h-56  items-center  '>
         <div className=' text-center w-1/2'>
             <div className='w-full mb-3'>
-                <div className=' text-4xl font-semibold mb-2'>Customer Reviews</div>
+                <div className=' text-2xl laptop:text-4xl font-semibold mb-2'>Customer Reviews</div>
                
             </div>
             <div className=''>
@@ -27,8 +27,8 @@ const Fourth = () => {
                     <div className='flex '>
                         <div>"</div>
                         <div className=''>
-                        <i className=' text-lg'>{data.a.msg}</i>
-                        <div mx-5 className=' font-semibold mb-1'>{data.a.name}</div>
+                        <div className=' laptop:text-lg mb-3 italiccd '><i>{data.a.msg}</i></div>
+                        <div mx-5 className=' font-semibold mb-2'>{data.a.name}</div>
                         <div className=' text-xs font-semibold text-gray-700'>{data.a.location}</div>
                         </div>
                         <div>"</div>
