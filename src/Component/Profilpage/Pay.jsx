@@ -25,7 +25,7 @@ const Pay = ({Close}) => {
       setname(<Sign/>)
       setload('none')
       const userid=await localStorage.getItem('usr')
-      const data= await fetch(`https://heritageapp.herokuapp.com/payment/${userid}`,{
+      const data= await fetch(`https://heritag.onrender.com/payment/${userid}`,{
               method:'PUT',
               headers:{
             'Accept':'application/json',

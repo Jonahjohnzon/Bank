@@ -5,14 +5,16 @@ import {Formik} from 'formik'
 import { useNavigate } from 'react-router-dom'
 import Loading from '../Loading'
 import { useLocation } from 'react-router-dom'
+
 import * as yup from 'yup'
-const Login = ({user}) => {
+const Login = () => {
   const navigation=useNavigate()
   const location = useLocation()
   const [shoe,setshow]=useState(false)
   const [Load,setLoad]=useState(false)
   const [error,seterror]=useState('')
   const [display,setdisplay]=useState(false)
+  
 
   const Schema=yup.object({
     email:yup.string().email().required().label('Email'),
@@ -40,7 +42,7 @@ const Login = ({user}) => {
           onSubmit={async(values)=>{
             setLoad(true)
             console.log(values)
-             const data= await fetch(`https://heritageapp.herokuapp.com/login`,{
+             const data= await fetch(`https://heritag.onrender.com/login`,{
               method:'POST',
               headers:{
             'Accept':'application/json',
@@ -53,18 +55,20 @@ const Login = ({user}) => {
               localStorage.setItem("tkn",info.token)
               localStorage.setItem("usr",info.data._id)
               if(info.auth){
-              user(info.auth)
               navigation('/',{info:info.data})
               navigation(0)
            
              }
              else{
+              console.log('f')
               setLoad(false)
               seterror(info.data)
               setdisplay(true)
              }
              }
              catch(err){
+              setdisplay(true)
+              setLoad(false)
               console.log(err)
              }
           }}

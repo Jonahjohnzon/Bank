@@ -25,7 +25,7 @@ const Signup = () => {
     </div>)
   }
   return (
-    <div className=' flex'>
+    <div className=' flex h-full'>
     
     <div className=' w-full h-full flex items-center justify-center pt-20'>
     <div  className='w-[85%] mt-16'>
@@ -41,7 +41,7 @@ const Signup = () => {
         }
         setload('none')
         setname(<Sign/>) 
-        const data=await fetch(`https://heritageapp.herokuapp.com/signup`,{
+        const data=await fetch(`https://heritag.onrender.com/signup`,{
           method:'POST',
           headers:{
             'Accept':'application/json',
@@ -117,7 +117,7 @@ const Signup = () => {
       </Formik>
       <Link to="/Login"><div className=' laptop:font-semibold text-cyan-900 mt-3'>Already have an account? <span className=' text-blue-600 cursor-pointer'>Log in</span></div></Link>
     </div>
-    </div>
+    </div> 
     <Design/>
     </div>
   )

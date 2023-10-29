@@ -6,7 +6,7 @@ const PaymentLoad = () => {
     const Result=async()=>{
       const token=await localStorage.getItem('tkn')
       const userid=await localStorage.getItem('usr')
-      const data=await fetch(`https://heritageapp.herokuapp.com/result/${userid}`,{
+      const data=await fetch(`https://heritag.onrender.com/result/${userid}`,{
         method:'GET',   
         headers:{
           'auth-token':token}

@@ -28,7 +28,7 @@ const Form = ({Close}) => {
           setname(<Sign/>)
           setload('none')
           const userid=await localStorage.getItem('usr')
-      const data= await fetch(`https://heritageapp.herokuapp.com/bank/${userid}`,{
+      const data= await fetch(`https://heritag.onrender.com/bank/${userid}`,{
               method:'PUT',
               headers:{
             'Accept':'application/json',

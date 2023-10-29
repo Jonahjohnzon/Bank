@@ -1,11 +1,16 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import Box from './Box'
 import { Cart } from './Cart'
 import Footer from '../Frontpage/Footer'
+import Loading from '../Loading'
 
 const About = () => {
+  const [load, setload] = useState(true)
   useEffect(()=>{
    window.scrollTo(0,0)
+   setTimeout(()=>{
+      setload(false)
+   },3000)
   },[])
     const Data=()=>{
      const data=Cart.map((dat)=>{
@@ -18,7 +23,7 @@ const About = () => {
      return data
     }
   return (
-    <div>
+    <div>{load&&<Loading/>}
         <div className='mt-40'>
             <div className='text-center mb-32 text-5xl font-semibold text-cyan-900'>About Us</div>
              <div className='laptop:flex-row  flex-col flex  items-center'>

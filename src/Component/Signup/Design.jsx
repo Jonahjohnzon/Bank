@@ -2,7 +2,7 @@ import React from 'react'
 
 const Design = () => {
   return (
-    <div className=' w-full hidden text-center bg-cyan-900 h-full shadow-md shadow-black relative laptop:flex flex-col items-center'>
+    <div className=' w-full hidden text-center bg-cyan-900 h-[100vh] shadow-md shadow-black relative laptop:flex flex-col items-center'>
     <div className=' z-10'>
     <img src="/Images/App1.png" className='w-[65%] rotate-45 mt-20 z-50' alt="design"/>
     </div>

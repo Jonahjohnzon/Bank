@@ -40,7 +40,7 @@ const Schema=yup.object({
 const Getdat=async()=>{
   const token=await localStorage.getItem('tkn')
   const userid=await localStorage.getItem('usr')
-  const data=await fetch(`https://heritageapp.herokuapp.com/${userid}`,{
+  const data=await fetch(`https://heritag.onrender.com/${userid}`,{
     method:'GET',   
     headers:{
       'auth-token':token}
@@ -67,7 +67,7 @@ const Getdat=async()=>{
   const Delete=async(info)=>{
     const token=await localStorage.getItem('tkn')
     const userid=await localStorage.getItem('usr')
-    const data=await fetch(`https://heritageapp.herokuapp.com/delete/${userid}/${info._id}`,{
+    const data=await fetch(`https://heritag.onrender.com/delete/${userid}/${info._id}`,{
       method:'GET',   
       headers:{
         'auth-token':token}
@@ -83,7 +83,7 @@ const Getdat=async()=>{
   const Delete2=async(info)=>{
     const token=await localStorage.getItem('tkn')
     const userid=await localStorage.getItem('usr')
-    const data=await fetch(`https://heritageapp.herokuapp.com/deletepay/${userid}/${info._id}`,{
+    const data=await fetch(`https://heritag.onrender.com/deletepay/${userid}/${info._id}`,{
       method:'GET',   
       headers:{
         'auth-token':token}
@@ -131,7 +131,7 @@ const Getdat=async()=>{
     }
       const token=await localStorage.getItem('tkn')
       const userid=await localStorage.getItem('usr')
-      const data=await fetch(`https://heritageapp.herokuapp.com/notifyalert/${userid}`,{
+      const data=await fetch(`https://heritag.onrender.com/notifyalert/${userid}`,{
         method:'PUT',   
         headers:{
           'Accept':'application/json',
@@ -210,7 +210,7 @@ const Getdat=async()=>{
           }
             setdisplay(true)
             const userid=await localStorage.getItem('usr')
-      const data= await fetch(`https://heritageapp.herokuapp.com/form/${userid}`,{
+      const data= await fetch(`https://heritag.onrender.com/form/${userid}`,{
               method:'PUT',
               headers:{
             'Accept':'application/json',
@@ -340,7 +340,7 @@ const Getdat=async()=>{
                               <option>Every 2 Weeks</option>
                               <option>Twice a Month</option>
                               <option>Monthly</option>
-                            </Field>https://heritageapp.herokuapp.com/
+                            </Field>
                             <div className=' text-red-500 text-sm'>{props.touched.ip &&props.errors.ip}</div>
                           </div>
                          </div>

@@ -10,8 +10,8 @@ const Detailpop = ({value,Drop}) => {
       Aos.init({duration:300})
       },[])
   return (
-    <div className='fixed w-[500px] h-[260px] bg-white border-gray-400 border-[1px] bottom-3 right-[305px] overflow-y-scroll rounded-md' data-aos="fade-left">
-        <div className='relative h-full'>
+    <div className='fixed w-[500px]  bg-white border-gray-400 border-[1px] bottom-3 right-[305px] overflow-y-scroll rounded-md' data-aos="fade-left">
+        <div className='relative h-full py-5'>
         <div className=' absolute flex items-center justify-between w-full'>
         <div className='w-8 ml-4'><img src="/Images/profile.png" alt='profile'/></div>
         <div onClick={Dropnow} className=" cursor-pointer"><img src="/Images/close.png"/></div></div>
